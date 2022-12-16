@@ -1,5 +1,3 @@
-
-
 html, body {
   height: 100vh;
   width: 100%;
@@ -17,27 +15,20 @@ header {
   margin: 20px 0px 70px 0px;
 }
 
-.generator-title {
-  margin: 10px;
+.hidden {
+  display: none;
 }
 
-.message-container {
-  width: inherit;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+/* ------------ BUTTONS ------------ */
 
-.generator-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 35%;
-  min-width: 500px;
-  height: 110px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
+button {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
+  background-color: #134d71;
+  border-radius: 5px;
+  width: 250px;
+  height: 40px;
 }
 
 .selection-options {
@@ -55,20 +46,35 @@ input[type=radio] {
   height: 20px;
 }
 
-.message-button-container {
+
+/* ------------ MESSAGE GENERATOR & DISPLAY ------------ */
+
+.message-container {
+  width: inherit;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
-button {
-  font-size: 20px;
-  font-family: 'Quicksand', sans-serif;
-  color: #ffffff;
-  background-color: #134d71;
-  border-radius: 5px;
-  width: 250px;
-  height: 40px;
+/* ------------ MESSAGE GENERATOR ------------ */
+
+.generator-title {
+  margin: 10px;
 }
+
+.generator-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 35%;
+  min-width: 500px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+/* ------- MESSAGE DISPLAY - IMAGE PLACEHOLDER & TEXT BOX ------ */
 
 .text-box, 
 .image-box {
@@ -79,6 +85,8 @@ button {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
 }
+
+/* ------------ MESSAGE DISPLAY - IMAGE PLACEHOLDER ------------ */
 
 .image-container {
   height: inherit;
@@ -91,6 +99,8 @@ button {
 .image-container > img {
   height: 60%;
 }
+
+/* ------------ MESSAGE DISPLAY - TEXT BOX ------------ */
 
 .text-container {
   display: flex;
@@ -106,6 +116,3 @@ p {
   color: black;
 }
 
-.hidden {
-  display: none;
-}
