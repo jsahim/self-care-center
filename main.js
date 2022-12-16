@@ -33,6 +33,7 @@ var mantras = [
   "I am the sky, the rest is weather."
 ]
 
+//Reusable Variables
 var currentMessageArray;
 var currentMessageIndex;
 
@@ -67,36 +68,40 @@ function selectMessageType(event){
 }
 
 function showAffirmation(){
-  var currentAffirmation = affirmations[getRandomIndex(affirmations)];
-  currentMessageArray = affirmations
-  currentMessageIndex = affirmations.indexOf(currentAffirmation)
-  textBox.classList.remove('hidden');
-  imageBox.classList.add('hidden');
-  messageInput.innerText = currentAffirmation
+  if(affirmations.length >= 1){
+    var currentAffirmation = affirmations[getRandomIndex(affirmations)];
+    currentMessageArray = affirmations
+    currentMessageIndex = affirmations.indexOf(currentAffirmation)
+    textBox.classList.remove('hidden');
+    imageBox.classList.add('hidden');
+    messageInput.innerText = currentAffirmation
+  }
 }
 
 function showMantra(){
-  var currentMantra = mantras[getRandomIndex(mantras)];
-  currentMessageArray = mantras
-  currentMessageIndex = mantras.indexOf(currentMantra)
-  textBox.classList.remove('hidden');
-  imageBox.classList.add('hidden');
-  messageInput.innerText = currentMantra;
+  if(mantras.length >= 1){
+    var currentMantra = mantras[getRandomIndex(mantras)];
+    currentMessageArray = mantras
+    currentMessageIndex = mantras.indexOf(currentMantra)
+    textBox.classList.remove('hidden');
+    imageBox.classList.add('hidden');
+    messageInput.innerText = currentMantra;
+  }
 }
 
 function deleteMessage(){
   currentMessageArray.splice(currentMessageIndex, 1)
   if(currentMessageArray === affirmations && currentMessageArray.length >= 1){
     showAffirmation()
-    alert("This message Has Been removed to improve your emotional well-being.")
+    alert("This message has been removed to improve your emotional health and wellness. You will not see this message again.")
   } else if (currentMessageArray === affirmations && currentMessageArray.length === 0){
-    messageInput.innerText = "Have you considered goat yoga instead? 🐐🧘🏽‍♂️"
-    return alert("NO MORE INSPIRATION FOUND.")
+    messageInput.innerText = "Have you considered goat yoga? 🐐🧘🏽‍♂️"
+    return alert("NO MORE INSPIRATION FOUND")
   } else if(currentMessageArray === mantras && currentMessageArray.length >= 1){
     showMantra()
-    alert("This message Has Been removed to improve your emotional well-being.")
+    alert("This message has been removed to improve your emotional health and wellness. You will not see this message again.")
   } else if (currentMessageArray === mantras && currentMessageArray.length === 0){
     messageInput.innerText = "I hear scream therapy works wonders. 🙀"
-    return alert("NO MORE INSPIRATION FOUND.")
+    return alert("NO MORE INSPIRATION FOUND")
   }
 }
