@@ -62,8 +62,10 @@ function selectMessageType(event){
   event.preventDefault()
   if(affirmationsRadioButton.checked){
     showAffirmation()
-  }else{
+  } else if(mantrasRadioButton.checked){
     showMantra()
+  } else {
+    alert("Please select a message type.")
   }
 }
 
@@ -75,6 +77,8 @@ function showAffirmation(){
     textBox.classList.remove('hidden');
     imageBox.classList.add('hidden');
     messageInput.innerText = currentAffirmation
+  } else {
+    alert("NO MORE INSPIRATION FOUND")
   }
 }
 
@@ -86,6 +90,8 @@ function showMantra(){
     textBox.classList.remove('hidden');
     imageBox.classList.add('hidden');
     messageInput.innerText = currentMantra;
+  } else {
+    alert("NO MORE INSPIRATION FOUND")
   }
 }
 
@@ -96,12 +102,12 @@ function deleteMessage(){
     alert("This message has been removed to improve your emotional health and wellness. You will not see this message again.")
   } else if (currentMessageArray === affirmations && currentMessageArray.length === 0){
     messageInput.innerText = "Have you considered goat yoga? 🐐🧘🏽‍♂️"
-    return alert("NO MORE INSPIRATION FOUND")
+    alert("NO MORE INSPIRATION FOUND")
   } else if(currentMessageArray === mantras && currentMessageArray.length >= 1){
     showMantra()
     alert("This message has been removed to improve your emotional health and wellness. You will not see this message again.")
   } else if (currentMessageArray === mantras && currentMessageArray.length === 0){
     messageInput.innerText = "I hear scream therapy works wonders. 🙀"
-    return alert("NO MORE INSPIRATION FOUND")
+    alert("NO MORE INSPIRATION FOUND")
   }
 }
