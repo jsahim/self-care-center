@@ -36,4 +36,4 @@
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
 - Although I only did one CYOA feature, from my QA testing, there are no bugs that I can see and any possible combination of user actions will be met with the desired response.
-- As a repeater, I initially felt that it was expected of me to do more than one CYOA feature, but while I contemplated those additions, I decide on perfecting the one that I had created. Ultimately, I think the singular feature provides a better user experience that several features with possibly buggy functionality. Learning this quality over quantity approach has been challenging for me.
+- As a repeater, I initially felt that it was expected of me to do more than one CYOA feature, but while I contemplated those additions, I decide on perfecting the one that I had created. Ultimately, I think the singular feature provides a better user experience than several features with possibly buggy functionality. Learning this quality over quantity approach has been challenging for me.
